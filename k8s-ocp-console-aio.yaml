@@ -29,18 +29,6 @@ subjects:
   name: openshift-console
   namespace: kube-system
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: kube-api
-  namespace: kube-system
-spec:
-  selector:
-    app: flannel
-  ports:
-  - port: 6443
-    targetPort: 6443
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
